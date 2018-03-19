@@ -5,9 +5,14 @@
 import Adafruit_CharLCD as LCD
 
 
-lcd = LCD.Adafruit_CharLCDPlate()
+
+
 
 displayText = "hello world"
+
+while (True):
+    if lcd.is_pressed(LCD.SELECT):
+        lcd.message("hello world") 
 
 lcd.clear()
 lcd.message(displayText)
